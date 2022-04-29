@@ -4,10 +4,12 @@ const mongoose = require (mongoose);
 const cors = require (cors);
 const path = require('path');
 
-import announcementRoutes from './routes/announcements.js';
-import userRouter from "./routes/user.js";
+
 
 const app = express();
+
+import announcementRoutes from './routes/announcements.js';
+import userRouter from "./routes/user.js";
 
 app.use(express.json({ limit: '30mb', extended: true }))
 app.use(express.urlencoded({ limit: '30mb', extended: true }))
