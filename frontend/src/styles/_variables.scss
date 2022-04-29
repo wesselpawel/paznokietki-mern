@@ -1,0 +1,66 @@
+$primary: rgb(156, 71, 71) !default;
+$secondary: rgb(83, 44, 44);
+$blackFilter: rgba(0, 0, 0, 0.6);
+$white-coffee: rgb(199, 199, 199);
+$small: 480px;
+$medium: 1023px;
+$pc: 1024px;
+$gill-font: 'font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif';
+$h1:7vw;
+$h1-mobile:12vw;
+
+$h2:2vw;
+$h2-mobile:6vw;
+
+$h3:2.5vw;
+$h3-mobile:2rem;
+
+@mixin flexSpace($display) {
+    justify-content: space-between;
+    align-items:center;
+    display:$display;
+}
+
+@mixin flexCenter($display){
+    justify-content: center;
+    align-items:center;
+    display:$display;
+}
+.center{
+    @include flexCenter(flex);
+    height:100vh;
+}
+@mixin flexEvenly($display){
+    justify-content: space-evenly;
+    align-items:center;
+    display:$display;
+}
+
+@mixin gridTemplate($left, $right){
+    width:100%;
+    grid-template-columns: $left $right;
+}
+
+@mixin transform($y, $x, $duration, $delay){
+    transform: translate($y, $x);
+    transition: $duration;
+    transition-delay: $delay;
+}
+
+
+@mixin actionButton() {
+    justify-content: center;
+    align-items:center;
+    display:flex;
+    background: rgb(0, 0, 0);
+    color:white;
+    height:50px;
+    width:225px;
+    border-radius: 15px;
+    font-size:1.275rem;
+    transition:.3s;
+    margin:0 35px;
+    border:none;
+    cursor: pointer;
+}
+

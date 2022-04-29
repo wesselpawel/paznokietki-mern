@@ -1,0 +1,119 @@
+@import "./variables";
+header{
+    @include flexSpace(flex);
+    background-color: black;
+    width:100%;
+    height:125px;
+    font-family: 'cocosharp';
+    color:white;
+    position:fixed;
+    top:0;
+    z-index: 5;
+        .logo{
+            height:100%;
+            width:25%;
+            img{
+            height:100%;
+            padding-left:50px;
+            }
+        }
+        nav{
+            @include flexSpace(inline-flex);
+            min-width:50%;
+            background-color: $primary;
+            border-radius: 15px;
+        }
+        .nav-item{
+            display:block;
+            text-align: center;
+            font-size: 18px;
+            width:100%;
+
+        }
+        .mobile-icon img{
+            visibility: hidden;
+            display:none;
+        }
+        .nav-login{
+            @include flexCenter(inline-flex);
+            font-family: 'cocosharp';
+            font-size: 18px;
+            width:30%;
+                img{
+                    height:25px;
+                    padding:12px;
+                }
+        }
+        .nav-news{
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
+        }
+        .nav-announcement{
+            border-bottom-right-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        .active{
+            background-color: $secondary;
+            transition:.3s;
+        }
+        .inactive{
+            background: inherit;
+        }
+}
+@media only screen and (max-width:1023px){
+    header{
+        height:70px;
+        position:fixed;
+        bottom:0;
+        @include flexSpace(flex);
+            .logo {
+                width:100%;
+                margin-left:-20px;
+                img{
+                text-align: left;
+                }
+            }
+            nav{
+                position:fixed;
+                bottom:0;
+                background-color: black;
+                width:100vw;
+                border-radius:inherit;
+            }
+            .nav-news{
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+            }
+            .nav-announcement{
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+            }
+            .nav-item{
+                    @include flexSpace(block);
+                    text-align: center;
+                    font-size: 14px;
+            }
+    
+            .mobile-icon{
+                display:block;
+                padding:5px 3px;
+            }
+            .nav-login{
+                margin-right:20px;
+                img{
+                    height:20px;
+                }
+            }
+            .mobile-icon{
+                @include flexCenter(flex);
+                height:25px;
+                    img{
+                        visibility: visible;
+                        display:flex;
+                        height:100%;
+                    }
+            }
+            
+
+    }
+}

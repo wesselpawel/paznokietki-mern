@@ -1,0 +1,76 @@
+@import "./variables";
+
+.background-home{
+    background: url('/images/background4.png') right no-repeat;
+    background-size: cover;
+    height:100vh;
+    width:100vw;
+    position:absolute;
+    z-index: -1;
+    filter: brightness(10%);
+}
+
+.layout{
+    width:100vw;
+    color:rgb(236, 228, 228);
+    font-family:Arial, Helvetica, sans-serif;
+    @include flexCenter(flex);
+    @media screen and (max-width: $small) {
+        padding-top: 20px;
+        letter-spacing: .2vw;
+    }
+    .headlines{
+        width:80%;
+        .title-headline{
+            font-size: 8vw;
+            margin-top: 25vh;
+            @media screen and (max-width: $small) {
+
+            }
+        }
+        .middle-headline{
+            margin:0;
+            font-size:2vw;
+            text-align: left;
+            width:70vw;
+            @media screen and (max-width: $small) {
+                font-size:4vw;
+                width:100%;
+            }
+        }
+        .invitation{
+            margin:10vh 0;
+            text-align: left;
+            @include flexSpace(inline-flex);
+            @media screen and (max-width: $small) {
+                @include flexSpace(block);
+                width:100%;
+              }
+                h3{
+                    margin:4vh auto;
+                    font-size:1.375rem;
+                    @media screen and (max-width: $small) {
+                        font-size:1.275rem;
+                    }
+                }
+                .invitation-button{
+                    @include actionButton();
+                    background: rgb(0, 0, 0);
+                    height:8vh;
+                    width:225px;
+                    border-radius: 15px;
+                    margin:0 30px;
+                    transition:.4s;
+                    padding:0 5px;
+                    @media screen and (max-width: $small) {
+                        font-size:1.275rem;
+                        width:80%;
+                        margin:8vh auto;
+                    }
+                    &:hover{
+                    background-color: rgb(56, 56, 56);
+                    }
+                }
+        }
+    }
+}

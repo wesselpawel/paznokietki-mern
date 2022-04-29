@@ -1,0 +1,15 @@
+@font-face {font-family: cocosharp;src: url(../fonts/cocosharp.ttf);}
+@import "./header";
+@import "./home";
+@import "./variables";
+@import "./authPage";
+html, body, ul{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+    font-family: 'cocosharp';
+}
