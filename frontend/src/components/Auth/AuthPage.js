@@ -132,13 +132,7 @@ function AuthPage() {
                             <div 
                             onClick={eyeHandler}
                             className="eye">
-                                {showPass === false ? 
-                                (
-                                    <img src={eye} alt="" />
-                                ) : (
-                                    <img src={eyeslash} alt=""
-                                    />
-                                )}
+                                <img src={showPass === false ? eye : eyeslash} alt="" />
                             </div>
                             
                         </div>
